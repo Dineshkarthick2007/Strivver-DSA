@@ -1,17 +1,12 @@
-import java.util.*;
-public class Main
-{
-    public static void display(int n)
-    {
-        if(n==0) return;
-        System.out.print(n+" ");
-        display(n-1); 
-    }
-	public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-
-        display(n);
+public class Main {
+    public static void main(String[] args) {
+        String original = "Hello! World_123 #Java$%";
         
+        // Matches any lowercase letter, uppercase letter, or digit
+        String result = original.replaceAll("[a-zA-Z0-9]", "");
+        
+        System.out.println("Original: " + original);
+        System.out.println("Result:   " + result); 
+        // Output: ! _  #$% (spaces and special characters remain)
     }
 }
