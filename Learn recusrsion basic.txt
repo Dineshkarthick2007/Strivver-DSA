@@ -1,0 +1,62 @@
+5
+Dinesh Dinesh Dinesh Dinesh Dinesh 
+
+import java.util.*;
+public class Main
+{
+    public static void printName(int n)
+    {
+        if(n==0) return ;
+        System.out.print("Dinesh ");
+        printName(n-1);
+        
+    }
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n=s.nextInt();
+		printName(n);
+	}
+}
+
+
+7
+1 2 3 4 5 6 7 
+
+
+import java.util.*;
+public class Main
+{
+    public static void display(int og,int temp)
+    {
+        if(temp==og+1) return;
+        System.out.print(temp+" ");
+        display(og,temp+1); 
+    }
+	public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+
+        display(n,n-n+1);
+    }
+}
+
+5
+5 4 3 2 1 
+
+import java.util.*;
+public class Main
+{
+    public static void display(int n)
+    {
+        if(n==0) return;
+        System.out.print(n+" ");
+        display(n-1); 
+    }
+	public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+
+        display(n);
+        
+    }
+}

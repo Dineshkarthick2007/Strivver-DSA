@@ -14,3 +14,149 @@ public class Main
 		System.out.println("Count of Digits: "+count);
 	}
 }
+
+
+12321
+Palindrome
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int original=n;
+		int rev=0;
+		while(n!=0)
+		{
+		    int rem=n%10;
+		    rev=rev*10+rem;
+		    n=n/10;
+		}
+		
+		if(original==rev)
+		{
+		    System.out.print("Palindrome");
+		}
+		else
+		{
+		    System.out.print("Not a Palindrome");
+		}
+	}
+}
+
+20 15
+5
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n1=s.nextInt();
+	    int n2=s.nextInt();
+	    
+	    int gcd=1;
+	    int min = Math.min(n1,n2);
+	    
+	    for(int i=1;i<min;i++)
+	    {
+	        if(n1%i==0 && n2%i==0)
+	        {
+	            gcd=i;
+	        }
+	    }
+	    System.out.print(gcd);
+	}
+}
+
+153
+Amstrong number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n=s.nextInt();
+	    
+	    int count=(int)(Math.log10(n)+1);
+	    int og=n;
+	    int result=0;
+	    while(n>0)
+	    {
+	        int rem=n%10;
+	        result=result+(int)(Math.pow(rem,count));
+	        n/=10;
+	    }
+	    
+	    if(result==og)
+	    {
+	        System.out.print("Amstrong number");
+	    }
+	    else
+	    {
+	        System.out.print("Not a Amstrong number");
+	    }
+	}
+}
+
+36
+1 2 3 4 6 9 12 18 36 
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n=s.nextInt();
+	    
+	    for(int i=1;i<=n;i++)
+	    {
+	        if(n%i==0)
+	        {
+	            System.out.print(i+" ");
+	        }
+	    }
+	}
+}
+
+18
+Not a prime
+
+import java.util.*;
+public class Main
+{
+    public static boolean isprime(int n)
+    {
+        if(n<=1) return false;
+        if(n==2) return true;
+        if(n%2==0) return false;
+        
+        for(int i=3;i<Math.sqrt(n);i++)
+        {
+            if(n%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+        
+    }
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    int n=s.nextInt();
+	    
+	    if(isprime(n))
+	    {
+	        System.out.print("Prime");
+	    }
+	    else
+	    {
+	        System.out.print("Not a prime");
+	    }
+	    
+	}
+}
