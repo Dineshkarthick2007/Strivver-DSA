@@ -157,3 +157,18 @@ class Solution {
         return false;
     }
 }
+Input: n = 2
+Output: 1
+Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1.
+
+
+class Solution {
+    public int fibb(int n)
+    {
+        if(n==0 || n==1) return n;
+        return fibb(n-1)+fibb(n-2);
+    }
+    public int fib(int n) {
+        return fibb(n);
+    }
+}

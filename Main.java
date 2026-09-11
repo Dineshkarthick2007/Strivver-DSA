@@ -1,12 +1,19 @@
+import java.util.*;
+
 public class Main {
+
     public static void main(String[] args) {
-        String original = "Hello! World_123 #Java$%";
-        
-        // Matches any lowercase letter, uppercase letter, or digit
-        String result = original.replaceAll("[a-zA-Z0-9]", "");
-        
-        System.out.println("Original: " + original);
-        System.out.println("Result:   " + result); 
-        // Output: ! _  #$% (spaces and special characters remain)
+        Scanner s = new Scanner(System.in);
+        String str = s.next();
+
+        int[] hash = new int[26];
+
+        for(int i=0;i<str.length;i++)
+        {
+            if(str[i]>='a' && str[i]<='z')
+            {
+                hash[str.charAt]
+            }
+        }
     }
 }
