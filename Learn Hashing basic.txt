@@ -27,4 +27,36 @@ public class Main {
     }
 }
 
+aabbccd
+4
+a b c e
+2
+2
+2
+0
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner s = new Scanner(System.in);
+        String str=s.next();
+        
+        int[] hash = new int[256];
+
+        for(int i=0;i<str.length();i++)
+        {
+            hash[str.charAt(i)]++;
+        }
+
+        int q=s.nextInt();
+        while(q-- !=0)
+        {
+            char ch = s.next().charAt(0);
+            System.out.println(hash[ch]);
+        }
+    }
+}
+
 
