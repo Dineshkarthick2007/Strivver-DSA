@@ -103,4 +103,39 @@ public class Main{
 }
 
 
+class Solution {
+
+    public int maxFrequency(int[] nums, int k) {
+
+        Arrays.sort(nums);
+
+        int answer = 1;
+
+        for (int x = nums.length - 1; x >= 0; x--) {
+
+            int max = nums[x];
+            int tempK = k;
+            int count = 1;
+
+            for (int i = x - 1; i >= 0; i--) {
+
+                int diff = max - nums[i];
+
+                if (tempK >= diff) {
+                    tempK = tempK - diff;
+                    count++;
+                }
+                else {
+                    break;
+                }
+            }
+
+            answer = Math.max(answer, count);
+        }
+
+        return answer;
+    }
+}
+
+
 
